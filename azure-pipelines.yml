@@ -3,8 +3,14 @@
 # Add steps that use Docker Compose, tag images, push to a registry, run an image, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
+resources:
+  containers:
+  - container: my_container
+    image: ubuntu:16.04
 pool:
   vmImage: 'Ubuntu-16.04'
+
+container: my_container
 
 variables:
   imageName: 'dickerfile:$(build.buildId)'
