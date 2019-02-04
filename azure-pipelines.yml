@@ -6,15 +6,15 @@
 resources:
   containers:
   - container: my_container
-    image: ubuntu:16.04
+    image: Ubuntu:16.04
+
 pool:
   vmImage: 'Ubuntu-16.04'
-
-container: my_container
 
 variables:
   imageName: 'dickerfile:$(build.buildId)'
 
 steps:
+- script: sudo curl -sSL https://get.docker.com/ | sh
 - script: docker build -f Dockerfile -t $(imageName) .
   displayName: 'docker build'
