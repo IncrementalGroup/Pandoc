@@ -28,7 +28,7 @@ ENTRYPOINT ["/root/.cabal/bin/pandoc"]
 CMD ["--help"]
 
 WORKDIR C:\Setup
-ADD https://vstsagentpackage.azuredge.net/agent/2.144.0/vsts-agent-win-x64-2.144.0.zip .
+ADD https://vstsagentpackage.azureedge.net/agent/2.144.0/vsts-agent-win-x64-2.144.0.zip .
 
 COPY InstallAgent.ps1 .
 COPY ConfigureAgent.ps1 .
