@@ -16,5 +16,6 @@ variables:
 
 steps:
 - script: sudo curl -sSL https://get.docker.com/ | sh
+- script: docker run -it microsoft/powershell
 - script: docker build -f Dockerfile -t $(imageName) .
   displayName: 'docker build'
