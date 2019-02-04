@@ -30,11 +30,11 @@ CMD ["--help"]
 WORKDIR C:\Setup
 ADD https://vstsagentpackage.azureedge.net/agent/2.144.0/vsts-agent-win-x64-2.144.0.zip .
 
-COPY InstallAgent.ps1 InstallAgent
-COPY ConfigureAgent.ps1 ConfigureAgent
+COPY InstallAgent.ps1 .
+COPY ConfigureAgent.ps1 .
 
 SHELL ["cmd", "/S", "/C"]
 
-RUN powershell.exe -noexit .\InstallAgent.ps1
+RUN powershell -noexit "& "".\InstallAgent.ps1""
 
 CMD powershell -noexit .\ConfigureAgent.ps1
