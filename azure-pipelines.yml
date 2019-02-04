@@ -7,7 +7,6 @@ resources:
   containers:
   - container: my_container
     image: ubuntu:16.04
-
 pool:
   vmImage: 'Ubuntu-16.04'
 
