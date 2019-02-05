@@ -35,6 +35,6 @@ COPY ConfigureAgent.ps1 .
 
 SHELL ["cmd", "/S", "/C"]
 
-RUN powershell -noexit "& "".\InstallAgent.ps1""
+RUN powershell -noexit .\InstallAgent.ps1
 
 CMD powershell -noexit .\ConfigureAgent.ps1
